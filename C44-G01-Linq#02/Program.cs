@@ -76,7 +76,7 @@ namespace LINQAssignment
 
             // 13. Products with most expensive price per category
 
-            khaled azoz, [8 / 30 / 2025 8:34 PM]
+           
 var expensiveProducts = ListGenerators.Products.GroupBy(p => p.Category)
                                 .SelectMany(g => g.Where(p => p.UnitPrice == g.Max(p2 => p2.UnitPrice)));
             foreach (var p in expensiveProducts) Console.WriteLine($"{p.Category} - {p.ProductName} : {p.UnitPrice}");
@@ -153,7 +153,7 @@ var expensiveProducts = ListGenerators.Products.GroupBy(p => p.Category)
                                   .Where(g => g.Any(p => p.UnitsInStock == 0));
             foreach (var g in outOfStockCats) Console.WriteLine(g.Key);
 
-            khaled azoz, [8 / 30 / 2025 8:34 PM]
+           
 // 3. Categories where all in stock
             var allInStockCats = ListGenerators.Products.GroupBy(p => p.Category)
                                    .Where(g => g.All(p => p.UnitsInStock > 0));
